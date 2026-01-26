@@ -16,14 +16,21 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+    };
+
     macros {
-        // Macro for Tilde ~ (Alt+K then Space on Swedish Mac)
         tilde_mac: tilde_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp K>, <&macro_release &kp LALT>, <&macro_tap &kp SPACE>;
         };
-        // Macro for Caret ^ (Shift+¨ then Space on Swedish Mac)
         caret_mac: caret_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
