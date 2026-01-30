@@ -10,7 +10,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: locale
-    remote: zmk-locale
-    revision: main
+      remote: zmk-locale
+      revision: main
   self:
     path: config
