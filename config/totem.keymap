@@ -17,6 +17,32 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp SV_ESCAPE_CHARACTER>;
+        };
+    };
+
+    macros {
+        gif: gif {
+            label = "giphy";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp G &kp I &kp F>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -24,8 +50,8 @@
             label = "BASE";
             bindings = <
 &kp SV_Q &kp SV_W &kp SV_E &kp SV_R &kp SV_T &kp SV_Y &kp SV_U &kp SV_I &kp SV_O &kp SV_P
-&mt LGUI SV_A &mt LALT SV_S &mt LCTRL SV_D &mt LSHFT SV_F &kp SV_G &kp SV_H &mt RSHFT SV_J &mt RCTRL SV_K &mt RALT SV_L &mt RGUI SV_ARING
-&kp LCTRL &kp SV_Z &kp SV_X &kp SV_C &kp SV_V &kp SV_B &kp SV_N &kp SV_M &kp SV_COMMA &kp SV_DOT &kp SV_MINUS &kp SV_ODIA
+&mt LGUI SV_A &mt LALT SV_S &mt LCTRL SV_D &mt LSHFT SV_F &kp SV_G &kp SV_H &mt RSHFT SV_J &mt RCTRL SV_K &mt RALT SV_L &mt RGUI SV_A_RING
+&kp LCTRL &kp SV_Z &kp SV_X &kp SV_C &kp SV_V &kp SV_B &kp SV_N &kp SV_M &kp SV_COMMA &kp SV_DOT &kp SV_MINUS &kp SV_O_UMLAUT
 &kp LGUI &kp TAB &lt NAV SPACE &lt SYM RET &kp BSPC &kp LALT
             >;
         };
@@ -33,9 +59,9 @@
         nav_layer {
             label = "NAVI";
             bindings = <
-&kp SV_ESC &trans &kp UP &kp SV_EQUAL &kp SV_LCBR &kp SV_RCBR &kp SV_N7 &kp SV_N8 &kp SV_N9 &kp SV_PLUS
-&kp LSHFT &kp LEFT &kp DOWN &kp RIGHT &kp SV_LBRC &kp SV_RBRC &kp SV_N4 &kp SV_N5 &kp SV_N6 &kp SV_MINUS
-&kp SV_CAPS &kp DEL &kp PG_UP &kp SV_CAPS &kp PG_DN &kp SV_LPAR &kp SV_RPAR &kp SV_N1 &kp SV_N2 &kp SV_N3 &kp SV_STAR &trans
+&kp SV_ESC &trans &kp UP &kp SV_EQUAL &kp SV_LBRC &kp SV_RBRC &kp SV_N7 &kp SV_N8 &kp SV_N9 &kp SV_PLUS
+&kp LSHFT &kp LEFT &kp DOWN &kp RIGHT &kp SV_LBKT &kp SV_RBKT &kp SV_N4 &kp SV_N5 &kp SV_N6 &kp SV_MINUS
+&kp SV_N6 &kp DEL &kp PG_UP &kp SV_N6 &kp PG_DN &kp SV_LPAR &kp SV_RPAR &kp SV_N1 &kp SV_N2 &kp SV_N3 &kp SV_STAR &trans
 &trans &trans &trans &mo ADJ &kp SV_N0 &trans
             >;
         };
@@ -43,9 +69,9 @@
         sym_layer {
             label = "SYM";
             bindings = <
-&kp SV_EXCL &kp SV_AT &kp SV_HASH &kp SV_DLLR &kp SV_TILDE &kp SV_CARET &kp SV_PLUS &kp SV_LPAR &kp SV_RPAR &kp SV_DQUOT
-&kp SV_ADIA &kp SV_ODIA &kp SV_ARING &kp SV_AMPS &kp SV_FSLH &kp SV_MINUS &kp SV_LBRC &kp SV_RBRC &kp SV_PIPE &kp SV_SQOT
-&trans &kp SV_BSLH &kp SV_PIPE &kp SV_EURO &kp SV_RCBR &kp SV_GT &kp SV_LT &kp SV_LCBR &kp SV_RCBR &kp SV_UNDER &kp SV_BSLH &trans
+&kp SV_EXCL &kp SV_AT &kp SV_HASH &kp SV_DLLR &kp SV_TILDE &kp SV_CARET &kp SV_PLUS &kp SV_LPAR &kp SV_RPAR &kp SV_DQT
+&kp SV_A_UMLAUT &kp SV_O_UMLAUT &kp SV_A_RING &kp SV_AMPS &kp SV_FSLH &kp SV_MINUS &kp SV_LBKT &kp SV_RBKT &kp SV_PIPE &kp SV_SQT
+&trans &kp SV_BSLH &kp SV_PIPE &kp SV_EURO &kp SV_RBRC &kp SV_GT &kp SV_LT &kp SV_LBRC &kp SV_RBRC &kp SV_UNDER &kp SV_BSLH &trans
 &trans &trans &mo ADJ &trans &kp C_PP &trans
             >;
         };
