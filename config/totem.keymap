@@ -51,6 +51,15 @@
 
         base_layer {
             label = "BASE";
+            //  ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+            //  ┃     Q     ┃     W     ┃     E     ┃     R     ┃     T     ┃   ┃     Y     ┃     U     ┃     I     ┃     O     ┃     P     ┃
+            //  ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+            //  ┃     A     ┃     S     ┃     D     ┃     F     ┃     G     ┃   ┃     H     ┃     J     ┃     K     ┃     L     ┃     Ö     ┃
+            //  ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+            //  ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     N     ┃     M     ┃     ,     ┃     .     ┃     -     ┃
+            //  ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+            //                                      ┃    GUI    ┃    TAB    ┃   ┃   ENTER   ┃   BSPC    ┃
+            //                                      ┗━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
                 &kp SV_Q      &kp SV_W      &kp SV_E       &kp SV_R        &kp SV_T             &kp SV_Y      &kp SV_U        &kp SV_I       &kp SV_O       &kp SV_P
                 &mt LGUI SV_A &mt LALT SV_S &mt LCTRL SV_D &mt LSHFT SV_F  &kp SV_G             &kp SV_H      &mt RSHFT SV_J  &mt RCTRL SV_K &mt RALT SV_L  &mt RGUI SV_O_UMLAUT
@@ -61,6 +70,9 @@
 
         nav_layer {
             label = "NAVI";
+            //  ESC  BT_CLR  UP     =      {  |  }  7  8  9  +
+            //  SHFT LEFT    DOWN   RIGHT  [  |  ]  4  5  6  -
+            //  CAPS DEL     PG_UP  LOCK   PG_DN (  |  )  1  2  3  *
             bindings = <
                 &kp ESC    &bt BT_CLR  &kp UP    &kp SV_EQUAL  &kp SV_LBRC    &kp SV_RBRC  &kp SV_N7        &kp SV_N8     &kp SV_N9        &kp SV_PLUS
                 &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT     &kp SV_LBKT    &kp SV_RBKT  &kp SV_N4        &kp SV_N5     &kp SV_N6        &kp SV_MINUS
@@ -71,6 +83,9 @@
 
         sim_layer {
             label = "SYM";
+            //  !     @     #     $     %  |  ^     &     Ü     '     "
+            //  Ä     trans SZ    trans trans|  -     =     (     )     Ö
+            //  trans EMAIL EMAIL trans trans|  `     * [     ]     \
             bindings = <
                 &kp SV_EXCL     &kp SV_AT    &kp SV_HASH  &kp SV_DLLR  &kp SV_PRCNT    &kp SV_CARET  &kp SV_AMPS   &kp SV_UMLAUT &kp SV_SQT    &kp SV_DQT
                 &kp SV_A_UMLAUT &trans       &kp RA(SV_S) &trans       &trans          &kp SV_MINUS  &kp SV_EQUAL  &kp SV_LPAR   &kp SV_RPAR   &kp SV_O_UMLAUT
