@@ -96,6 +96,9 @@
         sim_layer {
             label = "SYM";
             bindings = <
+                //  !     @     #     $     %  |  ^     &     Ü     '     "
+                //  Ä     trans SZ    trans trans|  -     =     (     )     Ö
+                //  trans EMAIL EMAIL trans trans|  `     * [     ]     \
                 &kp SV_EXCLAMATION &kp SV_AT_SIGN &kp SV_HASH      &kp SV_DLLR &kp SV_PRCNT    &kp SV_CARET &kp SV_AMPS  &kp SV_UMLAUT &kp SV_SQT   &kp SV_DQT
                 &kp SV_A_UMLAUT    &trans         &kp RA(SV_S)     &trans      &trans          &kp SV_MINUS &kp SV_EQUAL &kp SV_LPAR   &kp SV_RPAR  &kp SV_O_UMLAUT
 &trans          &kp RA(F18)        &kp RA(F19)    &trans           &trans      &trans          &kp SV_GRAVE &kp SV_STAR  &kp SV_LBKT   &kp SV_RBKT  &kp SV_BSLH  &trans
