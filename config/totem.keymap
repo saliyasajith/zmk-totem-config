@@ -20,16 +20,22 @@
 / {
     combos {
         compatible = "zmk,combos";
+
+        // ESC: Q + W
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        // Å: O + P
         combo_aa {
             timeout-ms = <50>;
             key-positions = <8 9>;
             bindings = <&kp SV_A_RING>;
         };
+
+        // Ä: L + Ö
         combo_ae {
             timeout-ms = <50>;
             key-positions = <18 19>;
@@ -49,6 +55,8 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
         base_layer {
             label = "BASE";
             //  ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -61,12 +69,14 @@
             //                                      ┃    GUI    ┃    TAB    ┃   ┃   ENTER   ┃   BSPC    ┃
             //                                      ┗━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
-                &kp SV_Q      &kp SV_W      &kp SV_E       &kp SV_R        &kp SV_T             &kp SV_Y      &kp SV_U        &kp SV_I       &kp SV_O       &kp SV_P
-                &mt LGUI SV_A &mt LALT SV_S &mt LCTRL SV_D &mt LSHFT SV_F  &kp SV_G             &kp SV_H      &mt RSHFT SV_J  &mt RCTRL SV_K &mt RALT SV_L  &mt RGUI SV_O_UMLAUT
-&kp LCTRL       &kp SV_Z      &kp SV_X      &kp SV_C       &kp SV_V        &kp SV_B             &kp SV_N      &kp SV_M        &kp SV_COMMA   &kp SV_DOT     &kp SV_MINUS         &kp SV_APOS
-                                            &kp LGUI       &kp TAB         &lt NAV SPACE        &lt SYM RET   &kp BSPC        &kp LALT
+                  &kp SV_Q      &kp SV_W      &kp SV_E       &kp SV_R        &kp SV_T             &kp SV_Y      &kp SV_U        &kp SV_I       &kp SV_O       &kp SV_P
+                  &mt LGUI SV_A &mt LALT SV_S &mt LCTRL SV_D &mt LSHFT SV_F  &kp SV_G             &kp SV_H      &mt RSHFT SV_J  &mt RCTRL SV_K &mt RALT SV_L  &mt RGUI SV_O_UMLAUT
+&kp LCTRL         &kp SV_Z      &kp SV_X      &kp SV_C       &kp SV_V        &kp SV_B             &kp SV_N      &kp SV_M        &kp SV_COMMA   &kp SV_DOT     &kp SV_MINUS         &kp SV_APOS
+                                              &kp LGUI       &kp TAB         &lt NAV SPACE        &lt SYM RET   &kp BSPC        &kp LALT
             >;
         };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         nav_layer {
             label = "NAVI";
@@ -74,12 +84,14 @@
             //  SHFT LEFT    DOWN   RIGHT  [  |  ]  4  5  6  -
             //  CAPS DEL     PG_UP  LOCK   PG_DN (  |  )  1  2  3  *
             bindings = <
-                &kp ESC    &bt BT_CLR  &kp UP    &kp SV_EQUAL  &kp SV_LBRC    &kp SV_RBRC  &kp SV_N7        &kp SV_N8     &kp SV_N9        &kp SV_PLUS
-                &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT     &kp SV_LBKT    &kp SV_RBKT  &kp SV_N4        &kp SV_N5     &kp SV_N6        &kp SV_MINUS
-&caps_word      &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN     &kp SV_LPAR    &kp SV_RPAR  &kp SV_N1        &kp SV_N2     &kp SV_N3        &kp SV_STAR   &trans
-                                       &trans    &trans        &lt ADJ SPACE  &lt ADJ RET  &kp SV_N0        &trans
+            &kp ESC    &bt BT_CLR  &kp UP    &kp SV_EQUAL  &kp SV_LBRC    &kp SV_RBRC  &kp SV_N7        &kp SV_N8     &kp SV_N9        &kp SV_PLUS
+            &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT     &kp SV_LBKT    &kp SV_RBKT  &kp SV_N4        &kp SV_N5     &kp SV_N6        &kp SV_MINUS
+&caps_word  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN     &kp SV_LPAR    &kp SV_RPAR  &kp SV_N1        &kp SV_N2     &kp SV_N3        &kp SV_STAR   &trans
+                                   &trans    &trans        &lt ADJ SPACE  &lt ADJ RET  &kp SV_N0        &trans
             >;
         };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         sim_layer {
             label = "SYM";
@@ -87,12 +99,14 @@
             //  Ä     trans SZ    trans trans|  -     =     (     )     Ö
             //  trans EMAIL EMAIL trans trans|  `     * [     ]     \
             bindings = <
-                &kp SV_EXCL     &kp SV_AT    &kp SV_HASH  &kp SV_DLLR  &kp SV_PRCNT    &kp SV_CARET  &kp SV_AMPS   &kp SV_UMLAUT &kp SV_SQT    &kp SV_DQT
-                &kp SV_A_UMLAUT &trans       &kp RA(SV_S) &trans       &trans          &kp SV_MINUS  &kp SV_EQUAL  &kp SV_LPAR   &kp SV_RPAR   &kp SV_O_UMLAUT
-&trans          &kp RA(F18)     &kp RA(F19)  &trans       &trans       &trans          &kp SV_GRAVE  &kp SV_STAR   &kp SV_LBKT   &kp SV_RBKT   &kp SV_BSLH  &trans
-                                             &trans       &gif         &mo ADJ         &trans        &kp C_PP      &trans
+            &kp SV_EXCL     &kp SV_AT    &kp SV_HASH  &kp SV_DLLR  &kp SV_PRCNT    &kp SV_CARET  &kp SV_AMPS   &kp SV_UMLAUT &kp SV_SQT    &kp SV_DQT
+            &kp SV_A_UMLAUT &trans       &kp RA(SV_S) &trans       &trans          &kp SV_MINUS  &kp SV_EQUAL  &kp SV_LPAR   &kp SV_RPAR   &kp SV_O_UMLAUT
+&trans      &kp RA(F18)     &kp RA(F19)  &trans       &trans       &trans          &kp SV_GRAVE  &kp SV_STAR   &kp SV_LBKT   &kp SV_RBKT   &kp SV_BSLH  &trans
+                                         &trans       &gif         &mo ADJ         &trans        &kp C_PP      &trans
             >;
         };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         adjust_layer {
             label = "ADJ";
