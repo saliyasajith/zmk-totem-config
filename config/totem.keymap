@@ -28,7 +28,17 @@
             bindings = <&mo OPR>;
         };
     };
-
+    macros {
+        screenshot: screenshot {
+            label = "mac_screenshot";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI &kp LSHFT>, 
+                    <&macro_tap &kp SV_N4>, 
+                    <&macro_release &kp LGUI &kp LSHFT>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
@@ -82,7 +92,7 @@
             bindings = <
                 &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_UP &kp C_PP    &kp C_MUTE      &trans      &trans      &kp UP      &trans      &trans
                 &kp LCTRL    &kp LGUI     &kp LALT     &kp LSHFT   &kp C_VOL_DN    &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans
-&trans          &kp C_PREV   &kp C_NEXT   &kp C_STOP   &trans      &kp C_AC_SEARCH &trans      &kp HOME    &kp PG_DN   &kp PG_UP   &kp END      &trans
+&screenshot          &kp C_PREV   &kp C_NEXT   &kp C_STOP   &trans      &kp C_AC_SEARCH &trans      &kp HOME    &kp PG_DN   &kp PG_UP   &kp END      &trans
                                           &trans       &trans      &trans          &trans      &trans      &trans
             >;
         };
