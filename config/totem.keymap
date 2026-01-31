@@ -57,7 +57,7 @@
         nav_layer {
             label = "NAVI";
             bindings = <
-&kp SV_ESC &trans &kp UP &kp SV_EQUAL &kp SV_LBRC &kp SV_RBRC &kp SV_N7 &kp SV_N8 &kp SV_N9 &kp SV_PLUS
+&kp SV_ESCAPE_CHARACTER &trans &kp UP &kp SV_EQUAL &kp SV_LBRC &kp SV_RBRC &kp SV_N7 &kp SV_N8 &kp SV_N9 &kp SV_PLUS
 &kp LSHFT &kp LEFT &kp DOWN &kp RIGHT &kp SV_LBKT &kp SV_RBKT &kp SV_N4 &kp SV_N5 &kp SV_N6 &kp SV_MINUS
 &kp SV_N6 &kp DEL &kp PG_UP &kp SV_N6 &kp PG_DN &kp SV_LPAR &kp SV_RPAR &kp SV_N1 &kp SV_N2 &kp SV_N3 &kp SV_STAR &trans
 &trans &trans &trans &mo ADJ &kp SV_N0 &trans
