@@ -57,7 +57,7 @@
             bindings = <
                 &kp SV_Q      &kp SV_W      &kp SV_E       &kp SV_R        &kp SV_T             &kp SV_Y      &kp SV_U        &kp SV_I       &kp SV_O       &kp SV_P
                 &mt LGUI SV_A &mt LCTRL SV_S &mt LALT SV_D &mt LSHFT SV_F  &kp SV_G             &kp SV_H      &mt RSHFT SV_J  &mt RALT SV_K &mt RCTRL SV_L  &mt RGUI SV_O_UMLAUT
-&kp LSHFT       &kp SV_Z      &kp SV_X      &kp SV_C       &kp SV_V        &kp SV_B             &kp SV_N      &kp SV_M        &kp SV_COMMA   &kp SV_DOT     &kp SV_MINUS         &kp SV_APOS
+&kp ESC       &kp SV_Z      &kp SV_X      &kp SV_C       &kp SV_V        &kp SV_B             &kp SV_N      &kp SV_M        &kp SV_COMMA   &kp SV_DOT     &kp SV_MINUS         &kp SV_APOS
                                             &kp LGUI       &kp TAB         &lt NAV SPACE        &lt SYM RET   &lt NUM BSPC    &kp LALT
             >;
         };
