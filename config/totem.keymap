@@ -12,6 +12,18 @@
 #define OPR  4
 
 / {
+    behaviors {
+        hm: home_row_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>; // The "magic" setting for fast typists
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         // Å: O + P
@@ -56,7 +68,7 @@
             //                                      ┗━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
                 &kp SV_Q      &kp SV_W      &kp SV_E       &kp SV_R        &kp SV_T             &kp SV_Y      &kp SV_U        &kp SV_I       &kp SV_O       &kp SV_P
-                &mt LGUI SV_A &mt LCTRL SV_S &mt LALT SV_D &mt LSHFT SV_F  &kp SV_G             &kp SV_H      &mt RSHFT SV_J  &mt RALT SV_K &mt RCTRL SV_L  &mt RGUI SV_O_UMLAUT
+                &hm LGUI SV_A &hm LCTRL SV_S &hm LALT SV_D &hm LSHFT SV_F  &kp SV_G             &kp SV_H      &hm RSHFT SV_J  &hm RALT SV_K &hm RCTRL SV_L  &hm RGUI SV_O_UMLAUT
 &kp ESC       &kp SV_Z      &kp SV_X      &kp SV_C       &kp SV_V        &kp SV_B             &kp SV_N      &kp SV_M        &kp SV_COMMA   &kp SV_DOT     &kp SV_MINUS         &kp SV_APOS
                                             &kp LGUI       &kp TAB         &lt NAV SPACE        &lt SYM RET   &lt NUM BSPC    &kp LALT
             >;
