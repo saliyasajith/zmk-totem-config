@@ -19,7 +19,7 @@
 };
 
 &msc {
-    time-to-max-speed-ms = <300>;
+    time-to-max-speed-ms = <300>;                       
     acceleration-exponent = <1>;
 };
 
@@ -73,7 +73,7 @@
             label = "mac_screenshot_pro";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI &kp LSHFT &kp LALT>, <&macro_tap &kp SV_N4>, <&macro_release &kp LGUI &kp LSHFT &kp LALT>;
+            bindings = <&macro_press &kp LGUI &kp LSHFT &kp LCTRL>, <&macro_tap &kp SV_N4>, <&macro_release &kp LGUI &kp LSHFT &kp LCTRL>;
         };
     };
 
@@ -142,10 +142,10 @@
             label = "MOU";
             bindings = <
                 /* LEFT SIDE: Modifiers & Clicks */                 /* RIGHT SIDE: 8-Way Move & Scroll */
-                &trans      &kp LSHFT   &kp SPACE    &mkp RCLK    &trans          &trans       &mupl           &mmv MOVE_UP    &mupr           &msc SCRL_UP
-                &kp LGUI    &kp LCTRL   &kp LALT     &mkp LCLK    &mkp MB4        &msc SCRL_LEFT &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_RIGHT
-&screenshot_pro &trans      &trans      &trans       &mkp MCLK    &mkp MB5        &trans       &mdnl           &mmv MOVE_DOWN   &mdnr           &msc SCRL_DOWN &trans
-                                        &trans       &trans       &trans          &kp SPACE    &kp LCTRL       &trans
+                &screenshot_pro &kp LSHFT   &kp SPACE    &mkp RCLK    &trans          &trans       &mupl           &mmv MOVE_UP    &mupr           &msc SCRL_UP
+                &kp LGUI        &kp LCTRL   &kp LALT     &mkp LCLK    &mkp MB4        &msc SCRL_LEFT &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_RIGHT
+&kp ESC         &trans          &trans      &trans       &mkp MCLK    &mkp MB5        &trans       &mdnl           &mmv MOVE_DOWN   &mdnr           &msc SCRL_DOWN &trans
+                                            &trans       &trans       &trans          &kp SPACE    &kp LCTRL       &trans
             >;
         };
     };
