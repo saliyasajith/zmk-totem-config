@@ -14,12 +14,12 @@
 
 /* Mouse Speed Configuration */
 &mmv {
-    time-to-max-speed-ms = <400>;
+    time-to-max-speed-ms = <1000>;
     acceleration-exponent = <1>;
 };
 
 &msc {
-    time-to-max-speed-ms = <300>;                       
+    time-to-max-speed-ms = <400>;                       
     acceleration-exponent = <1>;
 };
 
@@ -142,9 +142,9 @@
             label = "MOU";
             bindings = <
                 /* LEFT SIDE: Modifiers & Clicks */                 /* RIGHT SIDE: 8-Way Move & Scroll */
-                &screenshot_pro &kp LSHFT   &kp SPACE    &mkp RCLK    &trans          &trans       &mupl           &mmv MOVE_UP    &mupr           &msc SCRL_UP
-                &kp LGUI        &kp LCTRL   &kp LALT     &mkp LCLK    &mkp MB4        &msc SCRL_LEFT &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_RIGHT
-&kp ESC         &trans          &trans      &trans       &mkp MCLK    &mkp MB5        &trans       &mdnl           &mmv MOVE_DOWN   &mdnr           &msc SCRL_DOWN &trans
+                &screenshot_pro &kp LSHFT   &kp SPACE    &mkp RCLK    &trans          &trans       &mupl           &mmv MOVE_UP    &mupr           &msc SCRL_DOWN
+                &kp LGUI        &kp LCTRL   &kp LALT     &mkp LCLK    &mkp MB4        &msc SCRL_RIGHT &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_LEFT
+&kp ESC         &trans          &trans      &trans       &mkp MCLK    &mkp MB5        &trans       &mdnl           &mmv MOVE_DOWN   &mdnr           &msc SCRL_UP &trans
                                             &trans       &trans       &trans          &kp SPACE    &kp LCTRL       &trans
             >;
         };
