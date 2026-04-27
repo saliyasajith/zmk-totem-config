@@ -65,6 +65,8 @@
             label = "mac_screenshot";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <40>; // Time between each action
+            tap-ms = <40>;  // How long each tap lasts
             bindings = <&macro_press &kp LGUI &kp LSHFT>, <&macro_tap &kp SV_N4>, <&macro_release &kp LGUI &kp LSHFT>;
         };
 
@@ -73,7 +75,11 @@
             label = "mac_screenshot_pro";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI &kp LSHFT &kp LCTRL>, <&macro_tap &kp SV_N4>, <&macro_release &kp LGUI &kp LSHFT &kp LCTRL>;
+            wait-ms = <40>; // Time between each action
+            tap-ms = <40>;  // How long each tap lasts
+            bindings =  <&macro_press &kp LGUI &kp LSHFT &kp LCTRL>, 
+                        <&macro_tap &kp SV_N4>, 
+                        <&macro_release &kp LGUI &kp LSHFT &kp LCTRL>;
         };
     };
 
@@ -83,6 +89,7 @@
         combo_ae { timeout-ms = <50>; key-positions = <18 19>; bindings = <&kp SV_A_UMLAUT>; };
         combo_esc { timeout-ms = <50>; key-positions = <0 1>; bindings = <&kp ESC>; };
         combo_opr { timeout-ms = <50>; key-positions = <34 37>; bindings = <&mo OPR>; };
+        combo_caps_word { timeout-ms = <50>; key-positions = <13 16>; bindings = <&caps_word>; };
     };
 
     keymap {
