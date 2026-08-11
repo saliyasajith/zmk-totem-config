@@ -101,7 +101,7 @@
                 &kp SV_Q      &kp SV_W      &kp SV_E       &kp SV_R        &kp SV_T               &kp SV_Y      &kp SV_U        &kp SV_I       &kp SV_O        &kp SV_P
                 &hm LGUI SV_A &hm LCTRL SV_S &hm LALT SV_D &hm LSHFT SV_F  &kp SV_G               &kp SV_H      &hm RSHFT SV_J  &hm RALT SV_K &hm RCTRL SV_L  &hm RGUI SV_O_UMLAUT
 &kp ESC         &kp SV_Z      &kp SV_X      &kp SV_C       &kp SV_V        &kp SV_B               &kp SV_N      &kp SV_M        &kp SV_COMMA   &kp SV_DOT      &kp SV_MINUS        &kp SV_APOS
-                                            &kp LGUI       &lt MOU TAB     &lt NAV SPACE          &lt NUM RET   &kp BSPC        &mo SYM
+                                            &kp RET        &lt MOU TAB     &lt NAV SPACE          &mo NUM       &kp BSPC        &mo SYM
             >;
         };
 
@@ -120,7 +120,7 @@
             bindings = <
                 &kp F1      &kp F2      &kp F3      &kp F4      &kp F5          &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
                 &kp SV_N1   &kp SV_N2   &kp SV_N3   &kp SV_N4   &kp SV_N5       &kp SV_N6   &kp SV_N7   &kp SV_N8   &kp SV_N9   &kp SV_N0
-&kp LSHFT       &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &kp F11     &kp F12     &trans
+&kp LSHFT       &kp F11     &kp F12     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans     &trans
                                         &trans      &trans      &trans          &trans      &trans      &trans
             >;
         };
