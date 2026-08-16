@@ -35,6 +35,14 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
+        num_td: num_layer_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM_LAYER_TOGGLE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo NUM>, <&tog NUM>;
+        };
     };
 
     macros {
@@ -101,7 +109,7 @@
                 &kp SV_Q      &kp SV_W      &kp SV_E       &kp SV_R        &kp SV_T               &kp SV_Y      &kp SV_U        &kp SV_I       &kp SV_O        &kp SV_P
                 &hm LGUI SV_A &hm LCTRL SV_S &hm LALT SV_D &hm LSHFT SV_F  &kp SV_G               &kp SV_H      &hm RSHFT SV_J  &hm RALT SV_K &hm RCTRL SV_L  &hm RGUI SV_O_UMLAUT
 &kp ESC         &kp SV_Z      &kp SV_X      &kp SV_C       &kp SV_V        &kp SV_B               &kp SV_N      &kp SV_M        &kp SV_COMMA   &kp SV_DOT      &kp SV_MINUS        &kp SV_APOS
-                                            &kp RET        &lt MOU TAB     &lt NAV SPACE          &tog NUM      &kp BSPC        &mo SYM
+                                            &kp RET        &lt MOU TAB     &lt NAV SPACE          &num_td       &kp BSPC        &mo SYM
             >;
         };
 
